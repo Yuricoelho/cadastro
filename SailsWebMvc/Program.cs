@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SailsWebMvc.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SailsWebMvcContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SailsWebMvcContext") ?? throw new InvalidOperationException("Connection string 'SailsWebMvcContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
