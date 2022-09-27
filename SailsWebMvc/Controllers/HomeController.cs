@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SailsWebMvc.Models;
+using SailsWebMvc.Models.ViewModels;
 using System.Diagnostics;
 
 namespace SailsWebMvc.Controllers
