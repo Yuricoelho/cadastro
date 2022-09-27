@@ -15,11 +15,13 @@ namespace SailsWebMvc.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Message"] = "Salles web MVC App from C# Core";
             return View();
         }
 
         public IActionResult Privacy()
         {
+
             return View();
         }
 
